@@ -12,7 +12,10 @@ let counter = 0;
 let timerId = timerFlag;
 
 const start = async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox'],
+  });
   const page = await browser.newPage();
   await page.goto(process.env.ssEssay45Url);
   if (timerId === timerFlag)
