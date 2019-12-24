@@ -1,7 +1,8 @@
 const puppeteer = require('puppeteer');
 const TelegramBot = require('node-telegram-bot-api');
 const dotenv = require('dotenv');
-dotenv.config({ path: '.env' });
+const path = require('path');
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const bot = new TelegramBot(process.env.botToken);
 const interval = 30 * 1000;
