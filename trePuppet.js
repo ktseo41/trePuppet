@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const bot = new TelegramBot(process.env.botToken);
-const interval = 20 * 1000;
+const interval = 30 * 1000;
 const timerFlag = 'needStart';
 const reloadMax = 100;
 
