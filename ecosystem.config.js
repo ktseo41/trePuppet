@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: '씀에세이-45 빈자리 체크',
+      name: '씀에세이-45',
       script: 'trePuppet.js',
 
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
