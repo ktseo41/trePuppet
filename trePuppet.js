@@ -18,7 +18,12 @@ const start = async () => {
     args: ['--no-sandbox'],
   });
   const page = await browser.newPage();
-  await page.goto(process.env.ssEssay45Url);
+  try {
+    await page.goto(process.env.ssEssay45Url);
+  } catch (error) {
+    console.error(error)
+    start();
+  }
   if (timerId === timerFlag)
     timerId = setInterval(() => scrap(page, browser), interval);
 };
